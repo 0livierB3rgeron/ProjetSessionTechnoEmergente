@@ -1,0 +1,50 @@
+<!--
+    Page d'acceuil
+-->
+
+<!DOCTYPE html>
+<html>
+    <header>
+      <link rel="stylesheet" href="Styles/styles.css">
+    </header>
+    <body class="acceuil">
+        <nav>
+            <div class="navbar">        
+              <div class="container nav-container">
+                <input class="checkbox" type="checkbox"/>
+                <div class="hamburger-lines">
+                  <span class="bar bar1"></span>
+                  <span class="bar bar2"></span>
+                  <span class="bar bar3"></span>
+                </div>
+                <div class="barre logo">
+                    <h1>Taux de Change</h1>
+                </div>
+                <div class="menu-items">
+                  <li><a href="#">Profil</a></li>
+                  <li><a href="#">Favoris</a></li>
+                  <li><a href="index.html">Déconnexion</a></li>
+                </div>
+              </div>
+            </div>
+          </nav>
+               <form name="formulaire" id="formulaire" class="contenuAcceuil" onsubmit="JavaScript:traitementForm(event)" method="post">
+                  <div class="inputs">
+                     <label class="etiquette" for="initial">Montant à convertir :</label>
+                     <input id="initial" class="input" type="number" name="initial"required>
+                     <img class="fleche" src="./Styles/img/arrow-icon-vector.jpg" width="35" height="35">
+                     <label class="etiquette" for="resultat">Résultat :</label>
+                     <input id="resultat" class="input" type="number" name="resultat" readonly>
+                  </div>
+                  <div class="dropdowns">
+                     <label class="etiquette">Devise initial</label>
+                     <select class="select" id="dropdown1" onchange="JavaScript:getData()"><option value="none" selected disabled hidden>--Choisir--</option></select>
+                     <img class="fleche" src="./Styles/img/arrow-icon-vector.jpg" width="35" height="35">
+                     <label class="etiquette">Vers</label>
+                     <select class="select" id="dropdown2"></select>
+                  </div>
+                  <input type="submit" value="Soumettre" id="submit">
+               </form>
+          <script src="./index.js"></script>
+    </body>
+</html>
